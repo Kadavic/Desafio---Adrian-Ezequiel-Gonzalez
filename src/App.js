@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import Container from './componentes/container/container';
+import BasicExample from './componentes/navBar/navbar';
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
           Learn React
         </a>
       </header>
+      <Container/>
+      <BasicExample/>
     </div>
   );
 }
