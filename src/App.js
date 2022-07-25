@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Container from './componentes/container/container';
-import BasicExample from './componentes/navBar/navbar';
+import PillsExample from './componentes/navBar/navbar';
 
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
         </a>
       </header>
       <Container/>
-      <BasicExample/>
+      <PillsExample/>
     </div>
   );
 }
