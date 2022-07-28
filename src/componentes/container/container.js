@@ -15,7 +15,7 @@ function container(){
 function Container(){
     return(
         <div>
-            E-SHOP Argentina
+            <h1>E-SHOP Argentina</h1>
         </div>
     );
 }

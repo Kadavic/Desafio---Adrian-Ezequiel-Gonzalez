@@ -1,23 +1,33 @@
 import Nav from 'react-bootstrap/Nav';
+import CartWidget from '../cartwidget/cartWidget';
 
-function PillsExample() {
+
+function Navegador() {
   return (
     <div className='navegacion'>
-    <Nav variant="pills" defaultActiveKey="/home">
-      <Nav.Item>
-        <Nav.Link href="/home">Categorias</Nav.Link>
+    <Nav  variant="pills" defaultActiveKey="/home">
+      
+
+      <Nav.Item className='item'>
+        <Nav.Link eventKey="link-1" >Categorias</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="link-1">Ofertas</Nav.Link>
+
+      <Nav.Item className='item'>
+        <Nav.Link eventKey="link-2">Ofertas</Nav.Link>
       </Nav.Item>
-      <Nav.Item>
-        <Nav.Link eventKey="ingresa">
+
+      <Nav.Item className='item'>
+        <Nav.Link eventKey="link-3">
           Ingresa
         </Nav.Link>
       </Nav.Item>
+      <Nav.Item className='item'>
+        <CartWidget/>
+      </Nav.Item>
+      
     </Nav>
     </div>
   );
 }
 
-export default PillsExample;
+export default Navegador;
