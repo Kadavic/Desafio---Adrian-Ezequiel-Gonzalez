@@ -1,4 +1,4 @@
-const estilos = {
+/*const estilos = {
     borderColor:'black',
     borderStyle:'solid',
     margin:'20px',
@@ -15,4 +15,27 @@ function ItemListContainer(props){
         </div>
     )
 }
-export default ItemListContainer; 
+export default ItemListContainer; */
+import { useState } from "react";
+import { useEffect } from "react";
+import React from "react";
+import GetFetch from "../data/data";
+import { ItemList } from "../itemList/itemList";
+
+
+export const ItemListContainer =()=>{
+    const [data, setData] = useState([])
+    const [loading, setLoading]=useState(true)
+
+    useEffect(()=>{
+        GetFetch
+        .then((resp)=>setData(resp))
+        .catch(err=>console.log(err))
+        .finally(()=>setLoading(false))
+    },[])
+
+    return(<ItemList data={data} loading={loading}/>
+        
+    
+)}
+

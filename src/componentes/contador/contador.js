@@ -5,6 +5,7 @@ function Contador({stock, initial,onAdd}){
     //const handlers=useState(0)
     const [contador, setContador] = useState(initial)
     const [tope, setTope] =useState(stock)
+
     function agregarAlContador(){
         //handlers[1](handlers[0]+1)
         {contador>=tope ? <button disabled={true}></button> : setContador(contador + 1)}
@@ -13,24 +14,24 @@ function Contador({stock, initial,onAdd}){
     }
 
     function descontarAlContador(){
-        {contador<1 ? <button disabled={true}></button> : setContador(contador - 1)}
+        {contador<2 ? <button disabled={true}></button> : setContador(contador - 1)}
         
         console.log(contador)
     }
 
     return(
         <div className='asd'>
-        <div className='botones'>
-            <button className='agregarQuitar' onClick={agregarAlContador}>Agregar</button>
-            
-            <p className='contador'>
-                {contador}
-            </p>
-            <button className='agregarQuitar' onClick={descontarAlContador}>Quitar</button>
-        </div>
-        <div>
-            <button className='compra' onClick={onAdd}>Agregar al carrito</button>
-        </div>
+            <div className='botones'>
+                <button className='agregarQuitar' onClick={agregarAlContador}>Agregar</button>
+                
+                <p className='contador'>
+                    {contador}
+                </p>
+                <button className='agregarQuitar' onClick={descontarAlContador}>Quitar</button>
+            </div>
+            <div>
+                <button className='compra' onClick={onAdd}>Agregar al carrito</button>
+            </div>
         </div>
     )
 

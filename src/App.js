@@ -2,10 +2,14 @@
 import './App.css';
 import Container from './componentes/container/container';
 import Navegador from './componentes/navBar/navbar';
-import ItemListContainer from './componentes/itemListContainer/ItemListContainer';
+import { ItemListContainer } from './componentes/itemListContainer/ItemListContainer';
 import Contador from './componentes/contador/contador';
+import { ItemList } from './componentes/itemList/itemList';
+import GetFetch from './componentes/data/data';
 
 function App() {
+  
+  
   return (
     <div className="App">
       
@@ -14,15 +18,15 @@ function App() {
       <Navegador/>
       <div className='productos'>
         <div>
-          <ItemListContainer texto={'producto1'}/>
+          <ItemListContainer/>
           <Contador stock={5} initial={1}/>
         </div>
         <div>
-          <ItemListContainer texto={'producto2'}/>
+          <ItemListContainer/>
           <Contador stock={5} initial={1}/>
         </div>
         <div>
-          <ItemListContainer texto={'producto3'}/>
+          <ItemListContainer/>
           <Contador stock={5} initial={1}/>
         </div>
         
