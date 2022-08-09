@@ -1,14 +1,35 @@
 import  React from "react"
-export const ItemList = (data, loading) =>{
-console.log(data)
+import Contador from "../contador/contador"
+import DetallesDeJuegos from "../ItemDetails/ItemDetails"
+
+export const ItemList = ({data}, {loading}) =>{
 
 
 
 return(
-    <>
+    <div className="juegos">
         {
-        loading ? <h2>Cargando..</h2>: data.map(juegos => <li key={juegos.id}>{juegos.id} {juegos.nombre} <img src={juegos.img}/></li>)
-        }
-    </>
+        loading ? <h2>Cargando..</h2>: data.map(juegos => 
+        <div className="ficha" key={juegos.id}>
+            <div>
+                <p className="juegoNombre">{juegos.nombre}</p>
+            </div> 
+            <div className="juego">
+                <img src={juegos.img} alt={juegos.nombre} width={250} height={250}/>
+            </div>
+            <div  className="juego">
+                <DetallesDeJuegos key={juegos.id} detalles={juegos.detalles} categoria={juegos.categoria} precio={juegos.precio} cantidad={juegos.stock}/>
+            </div>
+            
+            <div>
+                
+            </div>  
+            <div className="juego">
+                <Contador stock={juegos.stock} initial={1}/>
+            </div> 
+        </div>
+        )}
+        
+    </div>
     )
 }

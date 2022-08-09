@@ -34,7 +34,10 @@ export const ItemListContainer =()=>{
         .finally(()=>setLoading(false))
     },[])
 
-    return(<ItemList data={data} loading={loading}/>
+    return(
+    <div className="tarjeta">
+        <ItemList data={data} loading={loading}/>
+    </div>
         
     
 )}

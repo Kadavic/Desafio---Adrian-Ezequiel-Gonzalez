@@ -20,7 +20,7 @@ function Contador({stock, initial,onAdd}){
     }
 
     return(
-        <div className='asd'>
+        <div className='contador'>
             <div className='botones'>
                 <button className='agregarQuitar' onClick={agregarAlContador}>Agregar</button>
                 

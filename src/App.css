@@ -1,9 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
 body{
   background-color: #282c34;
 }
 h1{
   padding: 15px;
-  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+ 
+  font-size:200%;
+  background-color: rgba(0, 0, 0, 0.795);
  
 }
 .App {
@@ -23,17 +30,15 @@ h1{
   margin-right: 10px;
   
 }
-div.productos{
-  display: flex;
-  justify-content: center;
-  text-align: center;
-}
-div.asd{
-  background-color: black;
+
+div.contador{
+  background-color: rgba(0, 0, 0, 0.712);
   margin-right: 10px;
   margin-left: 10px;
+  margin-bottom: 20px;
   
   border-radius: 10px;
+  
 }
 div.botones{
   display:flex;
@@ -55,5 +60,46 @@ button.agregarQuitar{
 }
 button.compra{
   margin-bottom: 10px;
+}
+div.productos{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  position:relative;
+}
+div.juegos{
+  display:flex;
+  flex-direction: row;
+  justify-content:center;
+  flex-wrap:wrap;
+  
+  margin:15px;
+  
+}
+div.ficha{
+  margin: 15px;
+  padding: 25px;
+  padding-bottom: 0px;
+  background-color: rgba(165, 42, 42, 0.678);
+  border-radius: 8px;
+  border-color: rgb(90, 23, 23);
+  border-style: solid;
+   
+  
+}
+p.juegoNombre{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: rgb(90, 23, 23);
+  border-radius: 500px;
+  font-size: large;
+}
+p.detalles{
+  margin-top: 10px;
+  padding: 10px;
+  background-color: rgb(37, 10, 10);
+  width: 250px;
+  border-radius: 8px;
+  
 }
 
