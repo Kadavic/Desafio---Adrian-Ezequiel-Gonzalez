@@ -2,7 +2,7 @@ import  React from "react"
 import Contador from "../contador/contador"
 import DetallesDeJuegos from "../ItemDetails/ItemDetails"
 
-export const ItemList = ({data}, {loading}) =>{
+export const ItemList = ({data, loading}) =>{
 
 
 

@@ -7,7 +7,10 @@ function DetallesDeJuegos({detalles,key,categoria,precio,cantidad}) {
     
     
     function mostrar(){
-        setIsShown(current => !current)
+        setTimeout(() =>{
+            setIsShown(current => !current)},2000)
+        
+        
     }
     return(
         <div>
@@ -17,7 +20,6 @@ function DetallesDeJuegos({detalles,key,categoria,precio,cantidad}) {
                                     <div><p className="detalles">Categoría: {categoria}</p></div>
                                     <div><p className="detalles">Precio: USD {precio}</p></div>
                                     <div><p className="detalles">Stock: {cantidad}</p></div>
-                                    
                             </div>
                     )}
             
