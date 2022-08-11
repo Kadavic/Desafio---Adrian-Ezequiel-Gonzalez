@@ -119,4 +119,12 @@ const GetFetch= new Promise((res,rej)=>{
         rej(console.log("No hay datos"))
     }
 })
+
+export const GetJuegoPorID = (id) => {
+    return new Promise((res,rej)=>{
+        setTimeout(() => {
+            res(data.filter(juegos => juegos.id === id))
+        }, 2000)
+    })
+}
 export default GetFetch

@@ -50,7 +50,6 @@ div.botones{
   
 }
 button.agregarQuitar{
-  background-color: whitesmoke;
   margin: 0% auto ;
   border-radius: 10%;
   margin-top: 10px;
@@ -66,15 +65,15 @@ div.productos{
   flex-direction: row;
   justify-content: center;
   text-align: center;
-  position:relative;
+  
 }
 div.juegos{
   display:flex;
   flex-direction: row;
   justify-content:center;
   flex-wrap:wrap;
-  
   margin:15px;
+  
   
 }
 div.ficha{
@@ -85,6 +84,8 @@ div.ficha{
   border-radius: 8px;
   border-color: rgb(90, 23, 23);
   border-style: solid;
+  min-height: 500px;
+  
    
   
 }
@@ -100,6 +101,12 @@ p.detalles{
   background-color: rgb(37, 10, 10);
   width: 250px;
   border-radius: 8px;
-  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+p.contador{
+  padding: 10px;
+  margin-top: 10px;
+}
+.pagina-activa{
+  background-color: black;
+}

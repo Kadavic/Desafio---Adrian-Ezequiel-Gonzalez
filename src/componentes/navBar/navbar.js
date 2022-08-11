@@ -1,31 +1,29 @@
-import Nav from 'react-bootstrap/Nav';
-import CartWidget from '../cartwidget/cartWidget';
 
+import CartWidget from '../cartwidget/cartWidget';
+import { NavLink } from 'react-router-dom';
 
 function Navegador() {
   return (
     <div className='navegacion'>
-    <Nav  variant="pills" defaultActiveKey="/home">
+    
+      
+      
+      
+      <NavLink className={({isActive}) => isActive ? 'pagina-activa' : undefined} to="/">Home</NavLink>
       
 
-      <Nav.Item className='item'>
-        <Nav.Link eventKey="link-1" >Categorias</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item className='item'>
-        <Nav.Link eventKey="link-2">Ofertas</Nav.Link>
-      </Nav.Item>
-
-      <Nav.Item className='item'>
-        <Nav.Link eventKey="link-3">
-          Ingresa
-        </Nav.Link>
-      </Nav.Item>
-      <Nav.Item className='item'>
-        <CartWidget/>
-      </Nav.Item>
       
-    </Nav>
+      <NavLink className={({isActive}) => isActive ? 'pagina-activa' : undefined} to="/juegos">Juegos</NavLink>
+      
+
+      
+      <NavLink className={({isActive}) => isActive ? 'pagina-activa' : undefined} to="/AboutUs">About Us</NavLink>
+      
+      
+      
+        
+      
+    
     </div>
   );
 }

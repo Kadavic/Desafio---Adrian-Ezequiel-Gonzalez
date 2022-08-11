@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import Button from 'react-bootstrap/Button';
 //hook
 
 function Contador({stock, initial,onAdd}){
@@ -15,22 +16,20 @@ function Contador({stock, initial,onAdd}){
 
     function descontarAlContador(){
         {contador<2 ? <button disabled={true}></button> : setContador(contador - 1)}
-        
-        console.log(contador)
     }
 
     return(
         <div className='contador'>
             <div className='botones'>
-                <button className='agregarQuitar' onClick={agregarAlContador}>Agregar</button>
+                <Button variant="dark" className='agregarQuitar' onClick={agregarAlContador}>Agregar</Button>
                 
                 <p className='contador'>
                     {contador}
                 </p>
-                <button className='agregarQuitar' onClick={descontarAlContador}>Quitar</button>
+                <Button variant="dark" className='agregarQuitar' onClick={descontarAlContador}>Quitar</Button>
             </div>
             <div>
-                <button className='compra' onClick={onAdd}>Agregar al carrito</button>
+                <Button variant="dark" className='compra' onClick={onAdd}>Agregar al carrito</Button>
             </div>
         </div>
     )

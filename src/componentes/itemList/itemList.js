@@ -3,9 +3,6 @@ import Contador from "../contador/contador"
 import DetallesDeJuegos from "../ItemDetails/ItemDetails"
 
 export const ItemList = ({data, loading}) =>{
-
-
-
 return(
     <div className="juegos">
         {
@@ -18,7 +15,7 @@ return(
                 <img src={juegos.img} alt={juegos.nombre} width={250} height={250}/>
             </div>
             <div  className="juego">
-                <DetallesDeJuegos key={juegos.id} detalles={juegos.detalles} categoria={juegos.categoria} precio={juegos.precio} cantidad={juegos.stock}/>
+                <DetallesDeJuegos id={juegos.id} detalles={juegos.detalles} categoria={juegos.categoria} precio={juegos.precio} cantidad={juegos.stock}/>
             </div>
             
             <div>
