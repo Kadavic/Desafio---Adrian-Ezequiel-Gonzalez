@@ -4,8 +4,8 @@ import { Route, Routes } from 'react-router-dom';
 import AboutUs from './pages/AboutUs';
 import Home from './pages/Home';
 import Juegos from './pages/Juegos';
-import DetallesDeJuegos from './componentes/ItemDetails/ItemDetails';
-import Juego from './pages/DetalleDeUnJuego';
+
+import DetalleDeUnJuego from './pages/DetalleDeUnJuego';
 
 
 
@@ -17,7 +17,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path='/AboutUs' element={<AboutUs/>}/>
         <Route path='/Juegos' element={<Juegos/>}/>
-        <Route path='/Juegos/:id' element={<Juego/>}/>
+        <Route path='/Juegos/:id' element={<DetalleDeUnJuego/>}/>
       </Routes>
       
       

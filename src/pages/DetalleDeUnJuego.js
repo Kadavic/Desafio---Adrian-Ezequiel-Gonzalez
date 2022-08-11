@@ -1,5 +1,5 @@
 import JuegoDetallado from "../componentes/JuegosDetallado/JuegoDetallado"
-export default function Juego(){
+export default function DetalleDeUnJuego(){
     return(
         <div>
             <JuegoDetallado/>
