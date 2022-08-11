@@ -1,6 +1,8 @@
 import  React from "react"
+import { Link } from "react-router-dom"
 import Contador from "../contador/contador"
 import DetallesDeJuegos from "../ItemDetails/ItemDetails"
+import Button from "react-bootstrap/esm/Button"
 
 export const ItemList = ({data, loading}) =>{
 return(
@@ -15,7 +17,8 @@ return(
                 <img src={juegos.img} alt={juegos.nombre} width={250} height={250}/>
             </div>
             <div  className="juego">
-                <DetallesDeJuegos id={juegos.id} detalles={juegos.detalles} categoria={juegos.categoria} precio={juegos.precio} cantidad={juegos.stock}/>
+                <Link to = {`/juegos/${juegos.id} `} ><Button>Detalles</Button></Link>
+                
             </div>
             
             <div>

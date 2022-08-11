@@ -1,6 +1,6 @@
-export default function JuegoElegido({detalles, categoria, precio, cantidad,id}){
+export default function JuegoElegido({detalles,id, categoria, precio, cantidad}){
     return(
-        <div key={id}> 
+        <div> 
             <div><p className="detalles">{detalles}</p></div>
             <div><p className="detalles">Categoría: {categoria}</p></div>
             <div><p className="detalles">Precio: USD {precio}</p></div>
