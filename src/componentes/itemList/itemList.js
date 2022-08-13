@@ -17,7 +17,7 @@ return(
                 <img src={juegos.img} alt={juegos.nombre} width={250} height={250}/>
             </div>
             <div  className="juego">
-                <Link to = {`/juegos/${juegos.id} `} ><Button>Detalles</Button></Link>
+                <Link to = {`/juegos/${juegos.id}`} ><Button>Detalles</Button></Link>
                 
             </div>
             

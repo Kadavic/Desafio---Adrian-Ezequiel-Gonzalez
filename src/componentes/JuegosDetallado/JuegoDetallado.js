@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
-import GetFetch, { GetJuegoPorID } from "../data/data"
+import { GetJuegoPorID } from "../data/data"
 import JuegoElegido from "../JuegoElegido/JuegoElegido"
 
 /*export default function JuegoDetallado(){
@@ -21,16 +21,12 @@ import JuegoElegido from "../JuegoElegido/JuegoElegido"
     return(<div></div>)
 } */
 const JuegoDetallado = () => {
-    const [juego,setJuego] = useState([])
+    const [juego,setJuego] = useState({})
     const {id} = useParams()
     useEffect(() => {
-        GetJuegoPorID(id)
-            .then(juego => {
-                setJuego(juego)
-            })
-            .catch(error => {
-                console.log(error)
-            })
+            GetJuegoPorID(id)
+            .then((juego) => setJuego(juego))
+            .catch(error => console.log(error))
     }, [id])
     return (
         <div>
