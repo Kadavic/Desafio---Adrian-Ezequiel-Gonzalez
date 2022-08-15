@@ -1,4 +1,4 @@
-import JuegoDetallado from "../componentes/JuegosDetallado/JuegoDetallado"
+import JuegoDetallado from "../componentes/JuegoDetallado/JuegoDetallado"
 export default function DetalleDeUnJuego(){
     return(
         <div>

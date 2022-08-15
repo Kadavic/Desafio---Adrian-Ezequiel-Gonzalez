@@ -21,7 +21,7 @@ import JuegoElegido from "../JuegoElegido/JuegoElegido"
     return(<div></div>)
 } */
 const JuegoDetallado = () => {
-    const [juego,setJuego] = useState({})
+    const [juego,setJuego] = useState()
     const {id} = useParams()
     useEffect(() => {
             GetJuegoPorID(id)
